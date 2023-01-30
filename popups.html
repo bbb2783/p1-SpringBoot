@@ -1,9 +1,11 @@
-<html xmlns:th="http://www.thymeleaf.com">
-<head><meta charset="UTF-8">
-<title>popups</title></head>
 <body>
-<script>
-	alert("미등록 아이디입니다. 문의전화: 010-2549-3828");
-	location.href="/login";
+<script th:inline="javascript">
+let msg = [[${msg}]];
+let url = [[${url}]];
+alert(msg);
+if(url == 'back')
+history.back();
+else
+location.href=url;
 </script>
 </body>

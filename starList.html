@@ -1,0 +1,21 @@
+<html xmlns:th="http://www.thymeleaf.com">
+<head>
+<meta charset="UTF-8">
+<title>투표수</title>
+</head>
+<body style="background-color:rgb(255, 255, 128)">
+<div align="center">
+<h3>투표결과</h3>
+<table width="600" border="1">
+<tr> <th>이름 <th>준결승 통과 <th>최종우승
+<tr th:each="m:${winner}"> 
+<td th:text="${m.name}">name
+<td th:text="${m.count}">phone
+</table><br>
+<span style="color:gray; font-size:0.7em">[저작자] Smilegate RPG
+[출처] Smilegate RPG 모코코! 생일 축하해! 이벤트 페이지
+(https://lostark.game.onstove.com/Promotion/Mission/220405)</span><br>
+<a href="/">홈으로 돌아가기</a> 
+</div>
+</body>
+</html>

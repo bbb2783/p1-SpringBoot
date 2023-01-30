@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head> <title>선택</title> </head>
+<meta charset="UTF-8">
+<body style="background-color:pink">
+<div align="center">
+<h2>Who is your favorite star? (결승)</h2>
+<form method="get" action="/star/winner">
+<table border="1">
+
+<tr><td><img th:src="|/${choice1}.png|" width="400" height="400"> <td><img th:src="|/${choice2}.png|" width="400" height="400"> 
+<tr><th><input type="radio" name="winner" th:value="${choice1}"> <span th:text="${choice1}"></span> <th><input type="radio" name="winner" th:value="${choice2}">
+<span th:text="${choice2}"></span>
+</table>
+<span style="color:gray; font-size:0.7em">[저작자] Smilegate RPG
+[출처] Smilegate RPG 모코코! 생일 축하해! 이벤트 페이지
+(https://lostark.game.onstove.com/Promotion/Mission/220405)</span><br>
+<input type="submit" value="선택">
+</form>
+</body>
+</html>

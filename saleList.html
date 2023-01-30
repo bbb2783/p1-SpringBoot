@@ -1,0 +1,22 @@
+<html xmlns:th="http://www.thymeleaf.com">
+<head>
+<meta charset="UTF-8">
+<title>sale 리스트</title>
+</head>
+<body style="background-color:rgb(128, 255, 128)">
+<div align="center">
+<h3> 전체 sale 리스트</h3>
+<table width="600" border="1">
+<tr> <th>number <th>id <th>name <th>time <th>buy <th>money
+<tr th:each="S:${list}"> 
+<td th:text="${S.number}" style="color:red; font-weight:bold">number
+<td th:text="${S.id}">id
+<td th:text="${S.name}">name
+<td th:text="${S.time}">time
+<td th:text="${S.buy}" style="color:orange; text-align:right">buy
+<td th:text="${S.money}">money
+</table><br>
+<a href="/menu">메뉴로 돌아가기</a> 
+</div>
+</body>
+</html>
